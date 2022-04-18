@@ -2,7 +2,7 @@ const options: string[] = [];
 
 let elegido: boolean = false;
 
-
+const title_message: HTMLElement = document.getElementById("title-message")
 
 const read: HTMLElement = document.getElementById("read");
 read.addEventListener("click", pushRead)
@@ -44,7 +44,7 @@ function pushStudy() {
     elegido = true;
 }
 function pushKondo() {
-    options.push('Kondo')
+    options.push('Tidy up')
     kondo.style.backgroundColor = "green";
 
     elegido = true;
@@ -65,6 +65,8 @@ function spin() {
         // console.log(options)
         // console.log(num_aleatorio)
 
+
+        title_message.innerHTML = `Well, do this:`
         main.style.display = "flex";
         main.style.justifyContent = "center"
 
