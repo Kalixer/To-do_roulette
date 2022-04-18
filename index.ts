@@ -50,7 +50,7 @@ function pushKondo() {
     elegido = true;
 }
 function pushAnime() {
-    options.push('Anime')
+    options.push('Watch Anime')
     anime.style.backgroundColor = "green";
 
     elegido = true;
@@ -62,8 +62,8 @@ function spin() {
     if (elegido) {
         
         let num_aleatorio = aleatorio(0, options.length - 1)
-        console.log(options)
-        console.log(num_aleatorio)
+        // console.log(options)
+        // console.log(num_aleatorio)
 
         main.style.display = "flex";
         main.style.justifyContent = "center"
@@ -78,7 +78,7 @@ function spin() {
     
         setTimeout(() => {
             main.innerHTML = `
-            <div class="box" id="carga">${options   [num_aleatorio]}
+            <div class="box" id="carga">${options  [num_aleatorio]}
             </div>
             `
         }, 3000)
@@ -86,7 +86,7 @@ function spin() {
         function aleatorio(min:number, max:number):number {
             const numero_r: number = Math.floor(Math.random() * (max - min + 1)) + min;
         
-            console.log(numero_r)
+            // console.log(numero_r)
             return numero_r
         }
         
